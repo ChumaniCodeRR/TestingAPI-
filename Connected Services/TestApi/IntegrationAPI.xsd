@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://brollcrestest.brollonline.co.za/wcfPropData/IntegrationAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="OwnerObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Accno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BRegNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingDate" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckBankBalance" type="ser:char" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICE_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsManagingAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnersKey" type="xs:int" />
+      <xs:element minOccurs="0" name="Owners_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalAddressPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShareUnits" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VAT_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YearEnd" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OwnerObj" nillable="true" type="tns:OwnerObj" />
+  <xs:complexType name="SaveOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" type="xs:int" />
+      <xs:element minOccurs="0" name="KeyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveOperation" nillable="true" type="tns:SaveOperation" />
+  <xs:complexType name="GetOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SystemMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dtResult" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOperation" nillable="true" type="tns:GetOperation" />
+  <xs:complexType name="ShareOwnerObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Accno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BRegNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingDate" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICE_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnersKey" type="xs:int" />
+      <xs:element minOccurs="0" name="OwnersShareKey" type="xs:int" />
+      <xs:element minOccurs="0" name="Owners_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShareUnits" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Share_Percentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VAT_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YearEnd" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShareOwnerObj" nillable="true" type="tns:ShareOwnerObj" />
+  <xs:complexType name="DocumentObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivecode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocID" type="xs:int" />
+      <xs:element minOccurs="0" name="DocName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Document" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhysicalLocationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UDF2Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UDF3Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UDFValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentObj" nillable="true" type="tns:DocumentObj" />
+  <xs:complexType name="PortfolioObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:int" />
+      <xs:element minOccurs="0" name="CallCenterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallCenterNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Portfolio_Key" type="xs:int" />
+      <xs:element minOccurs="0" name="Portfolio_Manager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Portfolio_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportLogo" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortfolioObj" nillable="true" type="tns:PortfolioObj" />
+  <xs:complexType name="BuildingObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accountant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminFee_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdminFee_Floor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdminNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admin_fee_key" type="xs:int" />
+      <xs:element minOccurs="0" name="AnchorTenants" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Billing_EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BondAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BondHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_key" type="xs:int" />
+      <xs:element minOccurs="0" name="Budget_YN" type="xs:short" />
+      <xs:element minOccurs="0" name="BuildingType_key" type="xs:int" />
+      <xs:element minOccurs="0" name="Building_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Building_Key" type="xs:int" />
+      <xs:element minOccurs="0" name="Charge_Int" type="xs:short" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clauses" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coverage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CreditController" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disp_Vacancy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Erf_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAR" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Floor" type="xs:int" />
+      <xs:element minOccurs="0" name="FunctionalCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GLA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grace" type="xs:int" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPDNodeID" type="xs:int" />
+      <xs:element minOccurs="0" name="IPDSubTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="InterestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterestRateFixed" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KeysHeldByName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeysHeldByNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LandLordConName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LandLordConNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LeaseAdmin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagingAgent_Key" type="xs:int" />
+      <xs:element minOccurs="0" name="MetricMeasurement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MunComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Municipality_Key" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Next_Inv_control" type="xs:int" />
+      <xs:element minOccurs="0" name="Offset" type="xs:float" />
+      <xs:element minOccurs="0" name="OpsManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerPaysInsurance" type="ser:char" />
+      <xs:element minOccurs="0" name="Owners_key" type="xs:int" />
+      <xs:element minOccurs="0" name="ParkingRatio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PayAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PenaltyFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Portfolio_key" type="xs:int" />
+      <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyAdmin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchasePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RentableArea" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reporting_Region" type="xs:int" />
+      <xs:element minOccurs="0" name="Start_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Street_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubGrade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenantInvoiceType" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleDeed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total_Area" type="xs:int" />
+      <xs:element minOccurs="0" name="Trading_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VAT_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valuation" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValuationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="YrEnd" type="xs:int" />
+      <xs:element minOccurs="0" name="ZoningHeight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoningRights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mreader_electricity" type="xs:int" />
+      <xs:element minOccurs="0" name="mreader_gas" type="xs:int" />
+      <xs:element minOccurs="0" name="mreader_water" type="xs:int" />
+      <xs:element minOccurs="0" name="userid_AssetManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_FinManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_FundManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_LeaseManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_PFExec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_ProcurementRecoveryAdministrator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid_UtilityPortfolioManager" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuildingObj" nillable="true" type="tns:BuildingObj" />
+  <xs:complexType name="IPDTypeObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IPDTypeObj" nillable="true" type="tns:IPDTypeObj" />
+  <xs:complexType name="IPDSubTypeObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Definition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IPDSubTypeObj" nillable="true" type="tns:IPDSubTypeObj" />
+  <xs:complexType name="IPDNodeObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IPDNodeObj" nillable="true" type="tns:IPDNodeObj" />
+  <xs:complexType name="MeterReaderObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reader_Key" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MeterReaderObj" nillable="true" type="tns:MeterReaderObj" />
+</xs:schema>

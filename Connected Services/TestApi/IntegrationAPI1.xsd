@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://brollcrestest.brollonline.co.za/wcfPropData/IntegrationAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://brollcrestest.brollonline.co.za/wcfPropData/IntegrationAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="SaveBuildingOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q1:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ownerObj" nillable="true" type="q2:OwnerObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildingOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveBuildingOwnerResult" nillable="true" type="q3:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingOwners">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q4:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingOwnersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetBuildingOwnersResult" nillable="true" type="q5:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildingShareOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q6:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="shareOwnerObj" nillable="true" type="q7:ShareOwnerObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildingShareOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveBuildingShareOwnerResult" nillable="true" type="q8:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingShareOwners">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q9:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnersKey" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingShareOwnersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetBuildingShareOwnersResult" nillable="true" type="q10:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOwnerDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q11:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnersKey" type="xs:int" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="documentObj" nillable="true" type="q12:DocumentObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOwnerDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveOwnerDocumentResult" nillable="true" type="q13:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOwnerDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q14:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnersKey" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOwnerDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetOwnerDocumentsResult" nillable="true" type="q15:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q16:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetLocalesResult" nillable="true" type="q17:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOwnerDocumentTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q18:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOwnerDocumentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetOwnerDocumentTypesResult" nillable="true" type="q19:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePortfolio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q20:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="portfolioObj" nillable="true" type="q21:PortfolioObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePortfolioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SavePortfolioResult" nillable="true" type="q22:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPortfolios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q23:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetPortfoliosResult" nillable="true" type="q24:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuilding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q25:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="buildingObj" nillable="true" type="q26:BuildingObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveBuildingResult" nillable="true" type="q27:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q28:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetBuildingTypesResult" nillable="true" type="q29:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminFees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q30:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminFeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetAdminFeesResult" nillable="true" type="q31:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q32:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetBranchesResult" nillable="true" type="q33:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q34:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="iPDTypeObj" nillable="true" type="q35:IPDTypeObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveIPDTypeResult" nillable="true" type="q36:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q37:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetIPDTypesResult" nillable="true" type="q38:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDSubType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q39:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="iPDSubTypeObj" nillable="true" type="q40:IPDSubTypeObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDSubTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveIPDSubTypeResult" nillable="true" type="q41:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDSubTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q42:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDSubTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetIPDSubTypesResult" nillable="true" type="q43:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q44:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="iPDNodeObj" nillable="true" type="q45:IPDNodeObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveIPDNodeResult" nillable="true" type="q46:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q47:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDNodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetIPDNodesResult" nillable="true" type="q48:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipalities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q49:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipalitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetMunicipalitiesResult" nillable="true" type="q50:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMeterReader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q51:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="meterReaderObj" nillable="true" type="q52:MeterReaderObj" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMeterReaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SaveMeterReaderResult" nillable="true" type="q53:SaveOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMeterReaders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q54:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMeterReadersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetMeterReadersResult" nillable="true" type="q55:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTenantInvoiceTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q56:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTenantInvoiceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetTenantInvoiceTypesResult" nillable="true" type="q57:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingTaxIntTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q58:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingTaxIntTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetBuildingTaxIntTypesResult" nillable="true" type="q59:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportingRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q60:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportingRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetReportingRegionsResult" nillable="true" type="q61:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManagingAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q62:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManagingAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetManagingAgentResult" nillable="true" type="q63:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForexCurrencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AccessKey" type="q64:guid" />
+        <xs:element minOccurs="0" name="AuditUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Locale_Key" type="xs:int" />
+        <xs:element minOccurs="0" name="BOLUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForexCurrenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetForexCurrenciesResult" nillable="true" type="q65:GetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
